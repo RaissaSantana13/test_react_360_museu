@@ -1,5 +1,4 @@
 import {
-  Body,
   ClassSerializerInterceptor,
   Controller,
   Post,
@@ -9,7 +8,6 @@ import {
 } from '@nestjs/common';
 import JwtAuthenticationGuard from '../../auth/config/jwt-authentication.guard';
 import RequestWithUser from '../../auth/config/requestWithUser.interface';
-import { ConfirmEmailResponse } from '../dto/confirm-email-response';
 import { EmailConfirmationService } from '../service/emailConfirmation.service';
 
 @Controller('email-confirmation')
@@ -18,14 +16,6 @@ export class EmailConfirmationController {
   constructor(
     private readonly emailConfirmationService: EmailConfirmationService,
   ) {}
-
-  @Post('confirm')
-  async confirm(@Body() confirmationData: ConfirmEmailResponse) {
-    const email = await this.emailConfirmationService.decodeConfirmationToken(
-      confirmationData.token,
-    );
-    await this.emailConfirmationService.confirmEmail(email);
-  }
 
   @Post('resend-confirmation-link')
   @UseGuards(JwtAuthenticationGuard)

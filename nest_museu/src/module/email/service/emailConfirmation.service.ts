@@ -45,14 +45,6 @@ export class EmailConfirmationService {
     await this.sendVerificationLink(usuario.email);
   }
 
-  public async confirmEmail(email: string) {
-    const user = await this.usuarioService.getByEmail(email);
-    if (user.emailVerified) {
-      throw new BadRequestException('Email already confirmed');
-    }
-    await this.usuarioService.markEmailAsConfirmed(email);
-  }
-
   public async decodeConfirmationToken(token: string) {
     try {
       const payload = await this.jwtService.verify(token, {
