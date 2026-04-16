@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-// Importamos o CSS diretamente da node_modules
 import 'pannellum/src/css/pannellum.css';
 
 export function Museum360() {
@@ -9,14 +8,11 @@ export function Museum360() {
 
   useEffect(() => {
     const loadPannellum = async () => {
-      // 1. Importa apenas para carregar o script no navegador (side-effect)
       await import('pannellum');
 
-      // 2. Acessa o objeto pannellum que foi anexado à window
       const lib = (window as any).pannellum;
 
       if (lib && viewerRef.current) {
-        // 3. Usa a biblioteca através da variável global detectada
         lib.viewer(viewerRef.current, {
           default: {
             firstScene: 'sala1',
@@ -81,7 +77,7 @@ export function Museum360() {
     loadPannellum();
 
     return () => {
-      // Limpeza opcional: se o pannellum tiver um método destroy, chame-o aqui
+      
     };
   }, []);
 
