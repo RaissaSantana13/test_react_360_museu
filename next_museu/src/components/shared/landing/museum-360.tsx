@@ -1,7 +1,10 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
 import 'pannellum/src/css/pannellum.css';
+import { useEffect, useRef } from 'react';
+
+const SUPABASE_CDN_URL =
+  'https://bpilpivecdbczmkkfdzo.supabase.co/storage/v1/object/public/fotos-360';
 
 export function Museum360() {
   const viewerRef = useRef<any>(null);
@@ -9,7 +12,6 @@ export function Museum360() {
   useEffect(() => {
     const loadPannellum = async () => {
       await import('pannellum');
-
       const lib = (window as any).pannellum;
 
       if (lib && viewerRef.current) {
@@ -23,7 +25,7 @@ export function Museum360() {
             sala1: {
               title: 'Sala 1',
               type: 'equirectangular',
-              panorama: '/assets/imagem1.jpg',
+              panorama: `${SUPABASE_CDN_URL}/imagem1.jpg`,
               hotSpots: [
                 {
                   pitch: 0,
@@ -44,7 +46,7 @@ export function Museum360() {
             sala2: {
               title: 'Sala 2',
               type: 'equirectangular',
-              panorama: '/assets/imagem2.jpg',
+              panorama: `${SUPABASE_CDN_URL}/imagem2.jpg`,
               hotSpots: [
                 {
                   pitch: 0,
@@ -58,7 +60,7 @@ export function Museum360() {
             sala3: {
               title: 'Sala 3',
               type: 'equirectangular',
-              panorama: '/assets/imagem3.jpg',
+              panorama: `${SUPABASE_CDN_URL}/imagem3.jpg`,
               hotSpots: [
                 {
                   pitch: 0,
@@ -77,7 +79,6 @@ export function Museum360() {
     loadPannellum();
 
     return () => {
-      
     };
   }, []);
 
