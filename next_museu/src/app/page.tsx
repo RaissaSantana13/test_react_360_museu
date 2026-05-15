@@ -1,3 +1,4 @@
+import { ModelSupabase } from '@/components/shared/landing/models-3d';
 import { HighlightCarousel } from '../components/shared/landing/carrossel';
 import { Events } from '../components/shared/landing/evento';
 import { Faqs } from '../components/shared/landing/faq';
@@ -14,6 +15,7 @@ export default function Home() {
       <main className="flex-grow flex flex-col items-center w-full overflow-x-hidden">
         <HeroMuseum />
         <HighlightCarousel />
+        <ModelSupabase />
         <Museum360 />
         <SearchSection />
         <Events />
