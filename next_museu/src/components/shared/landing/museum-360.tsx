@@ -20,7 +20,7 @@ export function Museum360() {
       if (lib && viewerRef.current) {
         viewer = lib.viewer(viewerRef.current, {
           default: {
-            firstScene: 'imagem1',
+            firstScene: 'imagem14',
             sceneFadeDuration: 1000,
             autoLoad: true,
           },
@@ -81,39 +81,22 @@ export function Museum360() {
               hotSpots: [
                 {
                   pitch: 0,
-                  yaw: -175,
+                  yaw: -185,
                   type: 'scene',
                   text: 'Voltar',
                   sceneId: 'imagem2',
                 },
 
                 {
-                  pitch: 0,
+                  pitch: 1,
                   yaw: -5,
                   type: 'scene',
                   text: '',
-                  sceneId: 'imagem4',
+                  sceneId: 'imagem6',
                 },
-              ],
-            },
-
-            imagem4: {
-              title: '',
-              type: 'equirectangular',
-              panorama: `${SUPABASE_CDN_URL}/ImagemPortaIndigena.jpg`,
-
-              hotSpots: [
-                {
-                  pitch: 0,
-                  yaw: 90,
-                  type: 'scene',
-                  text: 'Voltar',
-                  sceneId: 'imagem3',
-                },
-
                 {
                   pitch: 2,
-                  yaw: 0,
+                  yaw: 22,
                   type: 'scene',
                   text: 'Entrar na Sala Indígena',
                   sceneId: 'imagem5',
@@ -132,7 +115,227 @@ export function Museum360() {
                   yaw: -180,
                   type: 'scene',
                   text: 'Voltar',
-                  sceneId: 'imagem4',
+                  sceneId: 'imagem3',
+                },
+              ],
+            },
+            imagem6: {
+              title: '',
+              type: 'equirectangular',
+              panorama: `${SUPABASE_CDN_URL}/corredor_nicoleu-ferroviaria.jpg`,
+
+              hotSpots: [
+                {
+                  pitch: 0,
+                  yaw: -179,
+                  type: 'scene',
+                  text: 'Voltar',
+                  sceneId: 'imagem3',
+                },
+                {
+                  pitch: 1,
+                  yaw: -30,
+                  type: 'scene',
+                  text: 'Entrar na Sala Dona Irma ',
+                  sceneId: 'imagem8',
+                },
+                {
+                  pitch: 2,
+                  yaw: 85,
+                  type: 'scene',
+                  text: 'Entrar na Sala Nicolau/Ferroviária',
+                  sceneId: 'imagem7',
+                },
+                {
+                  pitch: 3,
+                  yaw: 5,
+                  type: 'scene',
+                  text: '',
+                  sceneId: 'imagem9',
+                },
+              ],
+            },
+            imagem7: {
+              title: '',
+              type: 'equirectangular',
+              panorama: `${SUPABASE_CDN_URL}/sala_nicolau_ferroviaria.jpg
+`,
+
+              hotSpots: [
+                {
+                  pitch: 0,
+                  yaw: 83,
+                  type: 'scene',
+                  text: 'Voltar',
+                  sceneId: 'imagem6',
+                },
+              ],
+            },
+            imagem8: {
+              title: '',
+              type: 'equirectangular',
+              panorama: `${SUPABASE_CDN_URL}/sala_dona_irma1.jpg`,
+
+              hotSpots: [
+                {
+                  pitch: 0,
+                  yaw: 0,
+                  type: 'scene',
+                  text: 'Voltar',
+                  sceneId: 'imagem6',
+                },
+              ],
+            },
+            imagem9: {
+              title: '',
+              type: 'equirectangular',
+              panorama: `${SUPABASE_CDN_URL}/corredor_renato_someimagem.jpg`,
+
+              hotSpots: [
+                {
+                  pitch: 0,
+                  yaw: 5,
+                  type: 'scene',
+                  text: 'Voltar',
+                  sceneId: 'imagem6',
+                },
+                {
+                  pitch: 1,
+                  yaw: 188,
+                  type: 'scene',
+                  text: 'Entrar na Sala do Rádio',
+                  sceneId: 'imagem13',
+                },
+                {
+                  pitch: 2,
+                  yaw: 90,
+                  type: 'scene',
+                  text: 'Entrar na Sala Renato Cordeiro',
+                  sceneId: 'imagem10',
+                },
+                {
+                  pitch: 3,
+                  yaw: -95,
+                  type: 'scene',
+                  text: 'Entrar na Sala Som e Imagem',
+                  sceneId: 'imagem11',
+                },
+              ],
+            },
+            imagem10: {
+              title: '',
+              type: 'equirectangular',
+              panorama: `${SUPABASE_CDN_URL}/sala_renato1.jpg`,
+
+              hotSpots: [
+                {
+                  pitch: 0,
+                  yaw: 66,
+                  type: 'scene',
+                  text: 'Entrar na sala do Rádio',
+                  sceneId: 'imagem14',
+                },
+                {
+                  pitch: 1,
+                  yaw: -117,
+                  type: 'scene',
+                  text: 'Voltar',
+                  sceneId: 'imagem9',
+                },
+              ],
+            },
+            imagem11: {
+              title: '',
+              type: 'equirectangular',
+              panorama: `${SUPABASE_CDN_URL}/sala_someimagem1.jpg`,
+
+              hotSpots: [
+                {
+                  pitch: 0,
+                  yaw: -80,
+                  type: 'scene',
+                  text: '',
+                  sceneId: 'imagem12',
+                },
+                {
+                  pitch: 1,
+                  yaw: -177,
+                  type: 'scene',
+                  text: 'Voltar',
+                  sceneId: 'imagem9',
+                },
+              ],
+            },
+            imagem12: {
+              title: '',
+              type: 'equirectangular',
+              panorama: `${SUPABASE_CDN_URL}/sala_someimagem2.jpg`,
+
+              hotSpots: [
+                {
+                  pitch: 0,
+                  yaw: 100,
+                  type: 'scene',
+                  text: 'Voltar',
+                  sceneId: 'imagem11',
+                },
+                {
+                  pitch: 1,
+                  yaw: -170,
+                  type: 'scene',
+                  text: 'Entrar na Sala do Rádio',
+                  sceneId: 'imagem13',
+                },
+              ],
+            },
+            imagem13: {
+              title: '',
+              type: 'equirectangular',
+              panorama: `${SUPABASE_CDN_URL}/sala_radio1.jpg`,
+
+              hotSpots: [
+                {
+                  pitch: 0,
+                  yaw: 0,
+                  type: 'scene',
+                  text: 'Corredor',
+                  sceneId: 'imagem9',
+                },
+                {
+                  pitch: 1,
+                  yaw: -90,
+                  type: 'scene',
+                  text: 'Entrar na Sala do Rádio',
+                  sceneId: 'imagem12',
+                },
+                {
+                  pitch: 2,
+                  yaw: 120,
+                  type: 'scene',
+                  text: '',
+                  sceneId: 'imagem14',
+                },
+              ],
+            },
+            imagem14: {
+              title: '',
+              type: 'equirectangular',
+              panorama: `${SUPABASE_CDN_URL}/sala_radio3.jpg`,
+
+              hotSpots: [
+                {
+                  pitch: 0,
+                  yaw: -96,
+                  type: 'scene',
+                  text: 'Entrar na Sala Renato Cordeiro',
+                  sceneId: 'imagem10',
+                },
+                {
+                  pitch: 1,
+                  yaw: -178,
+                  type: 'scene',
+                  text: 'Voltar',
+                  sceneId: 'imagem13',
                 },
               ],
             },
