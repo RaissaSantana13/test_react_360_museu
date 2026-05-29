@@ -20,7 +20,7 @@ export function Museum360() {
       if (lib && viewerRef.current) {
         viewer = lib.viewer(viewerRef.current, {
           default: {
-            firstScene: 'imagem14',
+            firstScene: 'imagem1',
             sceneFadeDuration: 1000,
             autoLoad: true,
           },
@@ -156,7 +156,7 @@ export function Museum360() {
               ],
             },
             imagem7: {
-              title: '',
+              title: 'Sala Nicolau/Ferroviaria',
               type: 'equirectangular',
               panorama: `${SUPABASE_CDN_URL}/sala_nicolau_ferroviaria.jpg
 `,
@@ -172,7 +172,7 @@ export function Museum360() {
               ],
             },
             imagem8: {
-              title: '',
+              title: 'Sala Dona Irma',
               type: 'equirectangular',
               panorama: `${SUPABASE_CDN_URL}/sala_dona_irma1.jpg`,
 
@@ -223,7 +223,7 @@ export function Museum360() {
               ],
             },
             imagem10: {
-              title: '',
+              title: 'Sala Renato Cordeiro',
               type: 'equirectangular',
               panorama: `${SUPABASE_CDN_URL}/sala_renato1.jpg`,
 
@@ -245,7 +245,7 @@ export function Museum360() {
               ],
             },
             imagem11: {
-              title: '',
+              title: 'Sala Som e Imagem',
               type: 'equirectangular',
               panorama: `${SUPABASE_CDN_URL}/sala_someimagem1.jpg`,
 
@@ -267,7 +267,7 @@ export function Museum360() {
               ],
             },
             imagem12: {
-              title: '',
+              title: 'Sala Som e Imagem',
               type: 'equirectangular',
               panorama: `${SUPABASE_CDN_URL}/sala_someimagem2.jpg`,
 
@@ -289,7 +289,7 @@ export function Museum360() {
               ],
             },
             imagem13: {
-              title: '',
+              title: 'Sala do Radio',
               type: 'equirectangular',
               panorama: `${SUPABASE_CDN_URL}/sala_radio1.jpg`,
 
@@ -318,7 +318,7 @@ export function Museum360() {
               ],
             },
             imagem14: {
-              title: '',
+              title: 'Sala do Radio',
               type: 'equirectangular',
               panorama: `${SUPABASE_CDN_URL}/sala_radio3.jpg`,
 
